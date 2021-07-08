@@ -1,7 +1,9 @@
+require('dotenv').config();
+
 const baseUrl = 'https://www.googleapis.com/youtube/v3/commentThreads';
 const API_KEY = process.env.YOUTUBE_KEY;
 
-export const getComments = async (videoId: string) => {
+export const getComments = async videoId => {
   if (videoId === '') {
     console.log('hola');
   }
