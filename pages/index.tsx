@@ -1,4 +1,4 @@
-import React, { useState, useEffect, MouseEventHandler } from 'react';
+import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
 import styles from '../styles/Home.module.css';
@@ -11,16 +11,21 @@ export default function Home() {
 
   useEffect(() => {
     if (videoId !== '') {
-      getComments(videoId).then(resp => {
-        setComments(resp.items);
-      });
+      console.log('IN useEffect: ', { videoId });
+      getComments(videoId)
+        .then(resp => {
+          setComments(resp.items);
+        })
+        .catch(err => console.log(err));
     }
   }, [videoId]);
 
   const handleClick = async () => {
     let match = url.split('?v=')[1];
-    let videoId = match.split('&')[0];
-    setVideoId(videoId);
+    if (!match) return;
+    let vidId = match.split('&')[0];
+    if (!vidId) return;
+    setVideoId(vidId);
   };
 
   const renderMain = () => {

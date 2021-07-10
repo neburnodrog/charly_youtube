@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "axios": "^0.21.1",
     "dotenv": "^10.0.0",
     "dotenv-webpack": "^7.0.3",
     "fs": "^0.0.1-security",
