@@ -14,7 +14,7 @@ export default function Home() {
       console.log('IN useEffect: ', { videoId });
       getComments(videoId)
         .then(resp => {
-          setComments(resp.items);
+          setComments(resp);
         })
         .catch(err => console.log(err));
     }

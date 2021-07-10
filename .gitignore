@@ -35,6 +35,7 @@ yarn-error.log*
 
 #env
 .env
+next.config.js
 
 #data
 data.json
