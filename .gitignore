@@ -34,8 +34,7 @@ yarn-error.log*
 .vercel
 
 #env
-.env
-next.config.js
+.env.local
 
 #data
 data.json

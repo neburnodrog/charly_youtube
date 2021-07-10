@@ -8,7 +8,4 @@ module.exports = {
     // Will be available on both server and client
     staticFolder: '/static',
   },
-  env: {
-    API_KEY: 'AIzaSyBrlc2GA4DzCiiEIYk4Al485Z9ADtt9ojQ',
-  },
 };
