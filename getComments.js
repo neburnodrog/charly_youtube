@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const baseUrl = 'https://www.googleapis.com/youtube/v3/commentThreads.list';
-const API_KEY = process.env.API_KEY;
+const API_KEY = process.env.YOUTUBE_KEY;
 
 export async function getComments(videoId) {
   if (videoId === '') {
